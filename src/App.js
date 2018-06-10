@@ -13,8 +13,6 @@ import Profile from "./scenes/Main/scenes/Profile/Profile";
 
 const initialState = {
   input: '',
-  imageUrl: '',
-  box: {},
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -41,8 +39,6 @@ class App extends Component {
     super();
     this.state = {
       input: '',
-      imageUrl: '',
-      box: {},
       route: 'signin',
       isSignedIn: false,
       user: {
@@ -102,17 +98,17 @@ class App extends Component {
 
 
   render() {
-    const { isSignedIn, imageUrl, route, box } = this.state;
+    const { isSignedIn, route, user} = this.state;
     return (
       <div className="App">
-        {/* <Header />
-        <Main /> */}
         <Navigation
           isSignedIn={isSignedIn}
           onRouteChange={this.onRouteChange} />
         {route === 'home'
           ? <div>
-            <Profile user={this.state.user} />
+            <Header user={user}/>
+            <Main user={user}/> 
+           {/* <Profile user={this.state.user} /> */}
           </div>
           : (
             route != 'register'
