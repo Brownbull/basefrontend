@@ -1,0 +1,42 @@
+.dib {
+    display: inline-block;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.fw6 {
+    font-weight: 600;
+}
+
+.lh-title {
+    line-height: 1.25;
+}
+
+.gray {
+    color: #777;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.mv2 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.f6 {
+    font-size: .875rem;
+}
+
+@media screen and (min-width: 30em) {
+    .pa5-ns {
+        padding: 4rem;
+    }
+}
